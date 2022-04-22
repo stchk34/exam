@@ -1,0 +1,63 @@
+@import "../scss/variables";
+@import "../scss/_mixins.scss";
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/utilities";
+
+
+@import "../scss/header";
+@import"../scss/about";
+@import "../scss/services";
+@import "../scss/projects";
+@import "../scss/team";
+@import "../scss/news";
+@import "../scss/clients";
+@import "../scss/_contact.scss";
+@import "../scss/_footer.scss";
+@import "../scss/fonts.scss";
+html,body{
+  margin:0;
+  padding:0;
+  border: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family:$font-family-base;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+p{
+  margin:0;
+  text-align:center;
+}
+ul {
+  list-style: none;
+}
+
+.container{
+  flex-grow:1;
+}
+.views-field-title{
+  color:$primary;
+  font-size:21px;
+  font-weight:300;
+}
+.col{
+  padding:0;
+}
+
+.field-content{
+  text-transform: uppercase;
+}

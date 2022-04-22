@@ -1,0 +1,128 @@
+@import "../scss/variables";
+
+#block-views-block-projects-block-1 {
+  @extend %container;
+
+  .view-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: -8px;
+    @include media-breakpoint-down(lg) {
+      grid-template-columns:1fr 1fr;
+    }
+    @include media-breakpoint-down(sm) {
+      grid-template-columns:1fr;
+    }
+  }
+
+  .views-field-field-project-media {
+    margin: 66px 0 32px;
+  }
+
+  .views-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    background-color: $white;
+    border-bottom: 1px solid $primary;
+    margin-bottom: 40px;
+  }
+
+  .views-field-title {
+    font-size: 23px;
+    line-height: 39px;
+  }
+
+  .js-pager__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 142px;
+  }
+
+  .views-field-field-project-text {
+    color: $primary-light;
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+
+
+  h2 {
+    line-height: 61px;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $primary;
+    &:before, &:after {
+      background-color: $primary-light;
+      content: ' ';
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      width: 44%;
+    }
+
+  }
+
+  .content {
+    background: repeating-linear-gradient(-45deg, $primary-light, $primary-light 10%, transparent 10%, transparent 50%);
+    background-size: 8px 8px;
+
+  }
+
+  .views-field-field-project-text {
+    margin-bottom: 18px;
+    font-size: 14px;
+
+    a {
+      text-decoration: none;
+
+      &[href="/services/web_development"] {
+        color: #1bbc9b;
+      }
+
+      &[href="/services/php_development"] {
+        color: #9b58b5;
+      }
+
+      &[href="/services/app_development"] {
+        color: #e84c3d;
+      }
+
+      &[href="/services/drupal"] {
+        color: #32ade1;
+      }
+    }
+  }
+
+  .views-field-field-button-services {
+    text-align: center;
+    height: 29px;
+    line-height: 29px;
+    font-size: 14px;
+    width: 70px;
+    margin: 3px 5px 11px -3px;
+    background-color: $primary;
+
+    .field-content {
+      a {
+        color: $white;
+      }
+    }
+  }
+
+  .pager__item{
+    margin-right:26px;
+    &:hover {
+      background-color: #cecece;
+      border-radius: 50%;
+      width:20px;
+      transition: 1s;
+      color: #555555;
+    }
+  }
+}
