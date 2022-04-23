@@ -51,17 +51,21 @@
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
         "drupal/ctools": "^3.7",
+        "drupal/devel": "^4.1",
         "drupal/flag": "^4.0@beta",
+        "drupal/fontawesome": "^2.23",
         "drupal/google_map_field": "^1.14",
         "drupal/pagerer": "^2.3",
         "drupal/pathauto": "^1.9",
+        "drupal/simple_gmap": "^3.0",
         "drupal/slick": "^2.6",
         "drupal/slick_views": "^2.6",
         "drupal/taxonomy_menu": "^3.5",
         "drupal/token": "^1.10",
         "drupal/webform": "^6.1",
         "drush/drush": "^10.2",
-        "kenwheeler/slick": "^1.8"
+        "kenwheeler/slick": "^1.8",
+        "wikimedia/composer-merge-plugin": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -74,7 +78,8 @@
             "composer/installers": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "cweagans/composer-patches": true
+            "cweagans/composer-patches": true,
+            "wikimedia/composer-merge-plugin": true
         }
     },
     "extra": {
@@ -82,6 +87,11 @@
             "locations": {
                 "web-root": "web/"
             }
+        },
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json"
+            ]
         },
         "patches": {
             "drupal/flag": {

@@ -8,172 +8,185 @@
   background-position: center;
   background-size: cover;
 
-  @include media-breakpoint-up(lg) {
-    padding-top: 40px;
-    min-height: 700px;
-  }
-
-  #block-searchform {
+  #block-exam-search {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-right: 10px;
+    padding-left: 10px;
+
+    #edit-actions {
+      padding: 0;
+
+      #edit-submit {
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 0;
+        background: none;
+        color: transparent;
+        background: url('../img/icons8-search-64.png');
+        background-size: 25px 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-color: #dbdbdb;
+        padding-left: 0;
+        padding-right: 0;
+        width: 43px;
+        height: 43px;
+      }
+    }
 
     #edit-keys {
-      padding: 0px 0px 9px 7px;
-      margin: 0px 0px -9px;
-      border-color: $primary-light;
+      padding: 5px 0px 9px 5px;
+    }
+
+    .form-row>fieldset,
+    .form-row>div {
+      padding: 0;
+      flex: 0 1 auto;
+      width: auto;
+      max-width: none;
     }
   }
 
   #search-block-form {
-    display: inline-flex;
-  }
-
-  #edit-submit--2{
     display: flex;
-    justify-content: flex-end;
-    border-radius: 0;
-    background: none;
-    color: transparent;
-    background: url('../img/icons8-search-64.png');
-    background-size: 25px 25px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-color: #dbdbdb;
-    padding-left: 0;
-    padding-right: 0;
-    width: 40px;
-    height: 37px;
-  }
-}
-
-#navbar-main {
-  padding: 0;
-  position: relative;
-  background-color: $white;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 65%;
-  margin: 0 auto;
-
-  .site-branding-block {
-    background-color: $primary;
+    margin-left: 10px;
   }
 
-  #block-mainnavigation {
-    margin: 0;
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-
-    ul {
-      display: inline-flex;
-      margin: 0;
-
-      li {
-        padding: 0 0 0 5px;
-
-        &:first-child {
-          a {
-            color: transparent;
-
-            &:hover:after {
-              display: block;
-              position: absolute;
-              content: "";
-              height: 6px;
-              width: 5%;
-              transition: 0.3s;
-              margin: 0 auto;
-              background-color: #6e9bca;
-              transform: translate(0, 40px);
-            }
-          }
-
-          content:'';
-          background:url('../img/Homepage-menu.png');
-          background-size: 25px 25px;
-          background-repeat: no-repeat;
-          background-position: start;
-        }
-      }
-
-      a {
-        font-size: 16px;
-        margin-right: 10px;
-        text-transform:uppercase;
-        &:hover:after {
-          display: block;
-          position: absolute;
-          content: "";
-          height: 6px;
-          width: 5%;
-          transition: 0.3s;
-          margin: 0 25px;
-          background-color: #6e9bca;
-          transform: translate(0, 40px);
-        }
-      }
-    }
-
-  }
-
-  .site-branding {
+  .block-addtoany-block {
+    margin: 14px 0px 16px 0px;
     display: flex;
-    flex-direction: column;
-
-    &__name {
-      font-size: 33px;
-      text-transform: none;
-      margin: 0;
-      letter-spacing: 1px;
-      color: $blue;
-      line-height: 32px;
-    }
-
-    &__slogan {
-      color: $white;
-    }
-  }
-
-  #block-addtoanybuttons-2 {
-    display: inline-flex;
-    justify-content: center;
     align-items: center;
-    margin: 45px 0px;
 
     .addtoany_list>a {
       border: 0;
       display: inline-block;
       font-size: 16px;
-      padding: 0 5px;
+      padding: 0px 5px;
     }
+  }
+
+  @include media-breakpoint-up(lg) {
+    padding-top: 40px;
+    min-height: 700px;
+  }
+
+  .site-branding-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    padding: 28px 36px;
+
+  }
+
+  .site-branding__name {
+    font-size: 32px;
+    text-transform: none;
+    margin: 0;
+    letter-spacing: 2.8px;
+    color: $blue;
+    line-height: 34px;
+  }
+
+  .site-branding__slogan {
+    color: $white;
   }
 }
 
-#block-views-block-creativity-block-1-2 {
+.region-header {
+  width: 65%;
+  display: flex;
+  margin: 0 auto;
+  background-color: $white;
+}
+
+#block-exam-main-menu {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  display: flex;
+  margin: 0;
+}
+
+.nav-item {
+  font-size: 14px;
+  position: relative;
+
+  &:first-child {
+
+    content: '';
+    background: url('../img/Homepage-menu.png');
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: start;
+
+    a {
+      color: transparent;
+
+      &:hover:after {
+        left: 0;
+        right: 0;
+        position: absolute;
+        content: "";
+        height: 7px;
+        top: 61px;
+        width: 50%;
+        margin: 0;
+        background: $blue;
+      }
+    }
+  }
+
+}
+
+.nav-link {
+  font-size: 14px;
+  margin-right: 20px;
+  text-transform: uppercase;
+
+  &:hover:after {
+    left: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    height: 7px;
+    top: 61px;
+    width: 80%;
+    margin: 0;
+    background: $blue;
+  }
+
+  &:last-child {
+    margin-right: 14px;
+  }
+}
+
+#block-views-block-creativity-block-1 {
   position: relative;
   margin-top: -404px;
   margin-bottom: 280px;
-  width: 100%;
-
+  width: 66%;
+  text-align: center;
   .views-field-title {
     font-size: 62px;
     color: white;
-    text-align: center;
     line-height: 61px;
     font-weight: lighter;
   }
 
-  .views-field-field-subtitle {
+  .views-field-field-subtitle-header {
     font-size: 36px;
     line-height: 39px;
-    letter-spacing: 0.9px;
+    letter-spacing: 1.4px;
     color: $primary;
   }
 
-  .views-field-field-description-header {
+  .views-field-field-description-header{
     color: $blue;
+    padding-left: 34%;
+    padding-right: 33%;
   }
 }

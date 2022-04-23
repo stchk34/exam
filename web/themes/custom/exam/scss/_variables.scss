@@ -1,19 +1,16 @@
 $grid-gutter-width:30px;
-$font-family-base:'Source Sans Pro', sans-serif;
+$font-family-base:'Source Sans Pro',
+sans-serif;
 
-$grid-breakpoints: (
-  xs: 0,
+$grid-breakpoints: (xs: 0,
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
-);
-$container-max-widths: (
-  sm: 540px,
+  xl: 1200px);
+$container-max-widths: (sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1250px
-) ;
+  xl: 1250px);
 
 $blue: #6e9bca;
 $primary:#373645;
@@ -28,4 +25,3 @@ $contact-red: #e23012;
 $link-decoration: none;
 $link-hover-color: $primary;
 $link-hover-decoration:none;
-$grid-gutter-width: 30px;

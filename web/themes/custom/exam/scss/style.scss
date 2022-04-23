@@ -1,5 +1,4 @@
 @import "../scss/variables";
-@import "../scss/_mixins.scss";
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
@@ -21,43 +20,74 @@
 @import "../scss/clients";
 @import "../scss/_contact.scss";
 @import "../scss/_footer.scss";
-@import "../scss/fonts.scss";
-html,body{
-  margin:0;
-  padding:0;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
   border: none;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  font-family:$font-family-base;
+  font-family: $font-family-base;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
 }
 
-p{
-  margin:0;
-  text-align:center;
+.content,
+.view-content{
+  max-width: 1250px;
+  width: 100%;
+  margin: 0 auto;
 }
+
+h2 {
+  text-align: center;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+p {
+  margin: 0;
+}
+
 ul {
   list-style: none;
 }
 
-.container{
-  flex-grow:1;
+.js-pager__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
-.views-field-title{
-  color:$primary;
-  font-size:21px;
-  font-weight:300;
-}
-.col{
-  padding:0;
+.pager__item {
+  margin-right: 26px;
+  
 }
 
-.field-content{
+.views-field-title {
+  color: $primary;
+  font-size: 21px;
+  font-weight: 300;
+}
+
+.views-row,
+.col {
+  padding: 0;
+}
+
+.field-content {
   text-transform: uppercase;
+}
+
+.row {
+  --bs-gutter-x: 0px;
 }

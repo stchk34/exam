@@ -1,96 +1,101 @@
 @import "../scss/variables";
 
-.view-id-contact_ {
+.view-id-contact_us {
+    .node--view-mode-teaser {
+        border-bottom: none;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
 
-#edit-full-name {
-  padding: 10px 0;
-  width: 462px;
-  text-transform: uppercase;
-}
+        .node__title {
+            text-align: center;
+            text-transform: uppercase;
+            color: #373645;
+            margin: 88px 42% 61px;
+            font-size: 20px;
+            font-weight: 700;
 
-#edit-email-contact {
-  padding: 10px 0;
-  width: 462px;
-  text-transform: uppercase;
-}
-
-#edit-phone-contact {
-  padding: 10px 0;
-  width: 462px;
-  text-transform: uppercase;
-}
-
-#edit-your-message {
-  width: 462px;
-  padding: 35px 0;
-  text-transform: uppercase;
-}
-
-#edit-actions-submit {
-  width: 190px;
-  height: 48px;
-  background-color: $contact-red;
-  border-color: $contact-red;
-  text-transform: uppercase;
-  color: $white;
-}
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 53px
-  }
-
-  h2 {
-    text-align: center;
-    text-transform: uppercase;
-    color: $primary;
-    margin: 67px 43%;
-    font-size: 23px;
-    font-weight: 700;
-
-    &:after {
-      display: block;
-      content: '';
-      width: 55px;
-      position: relative;
-      height: 4px;
-      background-color: $primary-light;
-      margin: 0 auto;
-      transform: translate(0px, 10px);
+            &:after {
+                display: block;
+                content: '';
+                width: 55px;
+                position: relative;
+                height: 4px;
+                background-color: $primary-light;
+                margin: 0 auto;
+                transform: translate(0px, 10px);
+            }
+        }
     }
-  }
-
-  .layout--twocol-section--50-50 {
-    display: flex;
-    flex-wrap: nowrap;
-
-  }
-
-  #webform-submission-contact-us-node-97-add-form {
-    margin-left: 165px;
-    margin-right: 17px;
-  }
 }
 
+.block-field-blocknodecontactfield-contact-webform {
+    margin-left: 150px;
 
-.block-field-blocknodecontact-usfield-address-contact {
-  margin-bottom: 16px;
+    input,textarea{
+        margin-bottom: 18px;
+        text-transform: uppercase;
+    }
 
-  .field__item {
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    line-height: 22px;
-  }
+    #edit-name {
+        padding: 10px 0;
+        width: 462px;
+    }
 
-  h4 {
-    font-weight: bolder;
-    font-size: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    line-height: 22px;
-  }
+    #edit-email {
+        padding: 10px 0;
+        width: 462px;
+    }
+
+    #edit-subject {
+        padding: 10px 0;
+        width: 462px;
+    }
+
+    #edit-message {
+        width: 462px;
+        padding: 35px 0;
+    }
+
+    #edit-actions-submit {
+        width: 190px;
+        height: 48px;
+        background-color: $contact-red;
+        border-color: $contact-red;
+        color: $white;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 53px
+    }
+
+    .layout--twocol-section--50-50 {
+        display: flex;
+        flex-wrap: nowrap;
+
+    }
+
 }
 
+.block-field-blocknodecontactfield-location {
+    margin-bottom: 33px;
+
+    p {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 22px;
+    }
+
+    h3 {
+        font-weight: bolder;
+        font-size: 14px;
+        display: flex;
+        text-transform: uppercase;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 22px;
+    }
+}

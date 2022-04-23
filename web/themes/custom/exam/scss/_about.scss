@@ -1,50 +1,53 @@
 @import "../scss/_variables.scss";
 
-#block-views-block-about-block-1-2 {
-  @extend %container;
-  display: inline-flex;
-  align-items: center;
-  margin: 105px 0 78px;
-  border-top: 5px solid $primary;
-  border-bottom: 5px solid $blue;
-
+#block-views-block-about-block-1 {
   .views-row {
     display: inline-flex;
     align-items: center;
-    margin-left: 35px;
+    justify-content: space-between;
   }
-  a{
-    color: $white;
-    text-transform:uppercase;
-  }
-  p{
-    text-transform:uppercase;
+
+  .content {
+    border-top: 5px solid $primary;
+    border-bottom: 5px solid $blue;
+    margin: 105px auto 78px;
   }
 
   h2 {
-    font-size:30px;
+    font-size: 30px;
     margin: 6px 0 9px 0;
     display: inherit;
-    text-transform:uppercase;
+    text-transform: uppercase;
   }
 
-  .views-field-field-about-text {
-    color: grey;
-    margin: 0;
-    font-weight: 300;
-    font-size: 19px;
-    letter-spacing: 0.1px;
-    text-align: center;
+  .views-field-title {
+    font-size: 30px;
+    margin: 6px 0px 9px 0px;
+    display: inherit;
+    text-transform: uppercase;
+    font-weight:600;
   }
 
-  .views-field-field-about-button {
-    text-align: center;
-    height: 30px;
-    line-height: 31px;
-    font-size: 14px;
-    width: 112px;
-    margin: 0 15px 0 44px;
-    background-color: $blue;
+  a {
+    color: $white;
   }
 }
 
+.views-field-field-button-about {
+  text-align: center;
+  height: 30px;
+  line-height: 31px;
+  font-size: 14px;
+  width: 112px;
+  margin: 0 0px 0 31px;
+  background-color: $blue;
+}
+
+.views-field-field-text-about {
+  color: grey;
+  margin: 0;
+  font-weight: 300;
+  font-size: 19px;
+  letter-spacing: 0.1px;
+  text-align: center;
+}

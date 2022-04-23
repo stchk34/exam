@@ -1,105 +1,134 @@
 @import "../scss/variables";
 
-#block-views-block-projects-block-1 {
-  @extend %container;
-
-  .view-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-left: -8px;
-    @include media-breakpoint-down(lg) {
-      grid-template-columns:1fr 1fr;
-    }
-    @include media-breakpoint-down(sm) {
-      grid-template-columns:1fr;
-    }
-  }
-
-  .views-field-field-project-media {
-    margin: 66px 0 32px;
-  }
-
-  .views-row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-right: 10px;
-    background-color: $white;
-    border-bottom: 1px solid $primary;
-    margin-bottom: 40px;
-  }
-
-  .views-field-title {
-    font-size: 23px;
-    line-height: 39px;
-  }
-
-  .js-pager__items {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin-bottom: 142px;
-  }
-
-  .views-field-field-project-text {
-    color: $primary-light;
-    margin-bottom: 14px;
-    font-size: 16px;
-  }
-
-
-  h2 {
-    line-height: 61px;
-    font-size: 25px;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: $primary;
-    &:before, &:after {
-      background-color: $primary-light;
-      content: ' ';
-      display: inline-block;
-      height: 1px;
-      position: relative;
-      vertical-align: middle;
-      width: 44%;
+#block-views-block-project-block-1 {
+    .view-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-  }
+    .views-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 66px;
+        background-color: $white;
+        border-bottom: 1px solid $primary;
+        width: 92%;
+    }
 
-  .content {
-    background: repeating-linear-gradient(-45deg, $primary-light, $primary-light 10%, transparent 10%, transparent 50%);
-    background-size: 8px 8px;
+    .content {
+        padding: 0px 314px 0px 339px;
+        background: repeating-linear-gradient(-45deg, $primary-light, $primary-light 10%, transparent 10%, transparent 50%);
+        background-size: 8px 8px;
+        margin: 0;
+        max-width: 100%;
+    }
 
-  }
+    h2 {
+        line-height: 61px;
+        font-size: 25px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $primary;
+        margin: 89px auto 10px;
 
-  .views-field-field-project-text {
+        &:before,
+        &:after {
+            background-color: $primary-light;
+            content: ' ';
+            display: inline-block;
+            height: 1px;
+            position: relative;
+            vertical-align: middle;
+            width: 44%;
+        }
+
+    }
+
+    .views-field-title {
+        font-size: 23px;
+        line-height: 39px;
+    }
+
+    .region-content {
+        max-width: 1250px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .pagerer-container {
+        display: inline-table;
+        border: 0;
+        padding: 0;
+        width: 100%;
+        margin: 44px auto 154px;
+    }
+    .pagerer-center-pane {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            list-style-type: none;
+            padding-left: 0px;
+            li {
+                margin: 10px;
+                padding: 0 5px;
+                a {
+                    color:$primary;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+                &.is-active {
+                    background-color: #d0d0d0;
+                    border-radius: 50%;
+                    padding: 0 5px;
+                }
+            }
+            li:nth-child(3) {
+                a {
+                    padding-left: 2.5px;
+                    padding-right: 2.5px;
+                }
+            }
+        }
+    }
+    
+    ul.pager__items .js-pager__items {
+        left: -5px !important;
+    }
+}
+
+.views-field-field-media-project {
+    margin: 0px 0 32px;
+}
+
+.views-field-field-services-project {
     margin-bottom: 18px;
     font-size: 14px;
 
     a {
-      text-decoration: none;
+        text-decoration: none;
 
-      &[href="/services/web_development"] {
-        color: #1bbc9b;
-      }
+        &[href="/services/web-development"] {
+            color: #1bbc9b;
+        }
 
-      &[href="/services/php_development"] {
-        color: #9b58b5;
-      }
+        &[href="/services/php-development"] {
+            color: #9b58b5;
+        }
 
-      &[href="/services/app_development"] {
-        color: #e84c3d;
-      }
+        &[href="/services/app-development"] {
+            color: #e84c3d;
+        }
 
-      &[href="/services/drupal"] {
-        color: #32ade1;
-      }
+        &[href="/services/drupal"] {
+            color: #32ade1;
+        }
     }
-  }
+}
 
-  .views-field-field-button-services {
+.views-field-field-button-project {
     text-align: center;
     height: 29px;
     line-height: 29px;
@@ -108,21 +137,7 @@
     margin: 3px 5px 11px -3px;
     background-color: $primary;
 
-    .field-content {
-      a {
+    a {
         color: $white;
-      }
     }
-  }
-
-  .pager__item{
-    margin-right:26px;
-    &:hover {
-      background-color: #cecece;
-      border-radius: 50%;
-      width:20px;
-      transition: 1s;
-      color: #555555;
-    }
-  }
 }
